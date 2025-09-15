@@ -10,10 +10,10 @@ const Index = () => {
       
       <main className="container mx-auto px-4 py-16">
         <div className="max-w-6xl mx-auto">
-          <MenuSection title="BURGERS" items={burgers} />
-          <MenuSection title="FRIES & SIDES" items={fries} />
-          <MenuSection title="DRINKS" items={drinks} />
-          <MenuSection title="SPECIALS" items={specials} />
+          <MenuSection title="برگرها" items={burgers} />
+          <MenuSection title="سیب‌زمینی و پیش‌غذا" items={fries} />
+          <MenuSection title="نوشیدنی‌ها" items={drinks} />
+          <MenuSection title="ویژه‌ها" items={specials} />
         </div>
       </main>
       

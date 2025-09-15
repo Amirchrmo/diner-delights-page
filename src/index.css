@@ -124,7 +124,8 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-family: 'Vazirmatn', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    direction: rtl;
   }
 
   /* Custom burger shop typography */
@@ -132,6 +133,10 @@ All colors MUST be HSL.
     font-family: 'Bebas Neue', cursive, system-ui;
     font-weight: 400;
     letter-spacing: 0.05em;
+  }
+
+  .font-persian {
+    font-family: 'Vazirmatn', system-ui, sans-serif;
   }
 
   /* Custom animations */

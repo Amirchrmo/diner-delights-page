@@ -20,75 +20,75 @@ export interface MenuItem {
 export const burgers: MenuItem[] = [
   {
     id: "classic-burger",
-    name: "Classic Cheeseburger",
-    description: "Juicy beef patty with melted American cheese, fresh lettuce, tomato, onion, and our special sauce on a toasted sesame bun.",
-    price: "12.99",
+    name: "چیزبرگر کلاسیک",
+    description: "گوشت گاو آبدار با پنیر آمریکایی ذوب شده، کاهو تازه، گوجه، پیاز و سس مخصوص ما روی نان کنجدی برشته.",
+    price: "۳۲۰,۰۰۰",
     image: classicBurger,
-    imageAlt: "Classic cheeseburger with fresh toppings"
+    imageAlt: "چیزبرگر کلاسیک با مخلفات تازه"
   },
   {
     id: "bacon-burger",
-    name: "Bacon Deluxe",
-    description: "Premium beef patty topped with crispy bacon, Swiss cheese, lettuce, tomato, and smoky mayo on a brioche bun.",
-    price: "15.99",
+    name: "برگر بیکن دلوکس",
+    description: "گوشت گاو ممتاز با بیکن ترد، پنیر سوئیسی، کاهو، گوجه و مایونز دودی روی نان بریوش.",
+    price: "۳۹۰,۰۰۰",
     image: baconBurger,
-    imageAlt: "Bacon deluxe burger with crispy bacon"
+    imageAlt: "برگر دلوکس بیکن با بیکن ترد"
   },
   {
     id: "bbq-burger",
-    name: "BBQ Ranch Burger",
-    description: "Flame-grilled patty with tangy BBQ sauce, crispy onion rings, cheddar cheese, and ranch dressing on a toasted bun.",
-    price: "14.99",
+    name: "برگر باربیکیو رانچ",
+    description: "کتلت گوشت کبابی با سس باربیکیو، حلقه پیاز ترد، پنیر چدار و سس رانچ روی نان برشته.",
+    price: "۳۶۰,۰۰۰",
     image: bbqBurger,
-    imageAlt: "BBQ ranch burger with onion rings"
+    imageAlt: "برگر باربیکیو رانچ با حلقه پیاز"
   }
 ];
 
 export const fries: MenuItem[] = [
   {
     id: "classic-fries",
-    name: "Classic Fries",
-    description: "Golden, crispy French fries seasoned with our signature salt blend. Perfect for sharing or keeping all to yourself.",
-    price: "4.99",
+    name: "سیب‌زمینی کلاسیک",
+    description: "سیب‌زمینی طلایی و ترد با طعم‌دار کردن با نمک مخصوص ما. مناسب برای اشتراک یا خوردن به تنهایی.",
+    price: "۱۲۰,۰۰۰",
     image: friesImage,
-    imageAlt: "Golden crispy French fries"
+    imageAlt: "سیب‌زمینی طلایی ترد"
   },
   {
     id: "onion-rings",
-    name: "Crispy Onion Rings",
-    description: "Hand-battered onion rings fried to golden perfection. Served with our homemade ranch dipping sauce.",
-    price: "6.99",
+    name: "حلقه‌های پیاز ترد",
+    description: "حلقه‌های پیاز دست‌ساز در آرد سرخ شده تا رسیدن به رنگ طلایی. همراه با سس رانچ خانگی.",
+    price: "۱۷۰,۰۰۰",
     image: onionRings,
-    imageAlt: "Crispy golden onion rings"
+    imageAlt: "حلقه‌های پیاز طلایی ترد"
   }
 ];
 
 export const drinks: MenuItem[] = [
   {
     id: "vanilla-milkshake",
-    name: "Vanilla Milkshake",
-    description: "Thick and creamy vanilla milkshake made with premium ice cream, topped with whipped cream and a cherry.",
-    price: "5.99",
+    name: "میلک‌شیک وانیل",
+    description: "میلک‌شیک غلیظ و خامه‌ای وانیل ساخته شده با بستنی درجه یک، تزئین شده با خامه و آلبالو.",
+    price: "۱۴۰,۰۰۰",
     image: milkshake,
-    imageAlt: "Creamy vanilla milkshake with whipped cream"
+    imageAlt: "میلک‌شیک وانیل خامه‌ای با خامه"
   },
   {
     id: "classic-cola",
-    name: "Classic Cola",
-    description: "Ice-cold cola served in a chilled glass with fresh ice. The perfect complement to any burger.",
-    price: "2.99",
+    name: "کولا کلاسیک",
+    description: "کولا یخ‌زده در لیوان سرد با یخ تازه. مکمل عالی برای هر برگری.",
+    price: "۷۰,۰۰۰",
     image: cola,
-    imageAlt: "Refreshing cola with ice"
+    imageAlt: "کولا خنک‌کننده با یخ"
   }
 ];
 
 export const specials: MenuItem[] = [
   {
     id: "palace-special",
-    name: "Palace Special",
-    description: "Our signature double patty burger with everything - two beef patties, double cheese, bacon, lettuce, tomato, onion, pickles, and our secret Palace sauce.",
-    price: "18.99",
+    name: "اسپشیال قصر",
+    description: "برگر دو لایه مخصوص ما با همه چیز - دو کتلت گوشت، پنیر دوبل، بیکن، کاهو، گوجه، پیاز، خیارشور و سس مخفی قصر.",
+    price: "۴۶۰,۰۰۰",
     image: doubleBurger,
-    imageAlt: "Palace special double burger with all toppings"
+    imageAlt: "اسپشیال قصر برگر دوبل با همه مخلفات"
   }
 ];

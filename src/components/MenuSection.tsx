@@ -17,7 +17,7 @@ interface MenuSectionProps {
 const MenuSection = ({ title, items }: MenuSectionProps) => {
   return (
     <section className="mb-16">
-      <h2 className="font-diner text-4xl text-charcoal mb-8 text-center relative">
+      <h2 className="font-persian font-bold text-4xl text-charcoal mb-8 text-center relative">
         {title}
         <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-gradient-to-r from-primary to-accent rounded-full"></div>
       </h2>

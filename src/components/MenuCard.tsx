@@ -20,10 +20,10 @@ const MenuCard = ({ name, description, price, image, imageAlt }: MenuCardProps) 
       </div>
       <CardContent className="p-6">
         <div className="flex justify-between items-start mb-2">
-          <h3 className="font-diner text-xl text-charcoal">{name}</h3>
-          <span className="text-xl font-bold text-primary ml-4">${price}</span>
+          <h3 className="font-persian font-semibold text-xl text-charcoal">{name}</h3>
+          <span className="text-xl font-bold text-primary mr-4 font-persian">{price} تومان</span>
         </div>
-        <p className="text-warm-gray text-sm leading-relaxed">{description}</p>
+        <p className="text-warm-gray text-sm leading-relaxed font-persian">{description}</p>
       </CardContent>
     </Card>
   );

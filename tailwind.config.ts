@@ -68,6 +68,7 @@ export default {
       },
       fontFamily: {
         'diner': ['Bebas Neue', 'cursive', 'system-ui'],
+        'persian': ['Vazirmatn', 'system-ui', 'sans-serif'],
       },
       borderRadius: {
         lg: "var(--radius)",
