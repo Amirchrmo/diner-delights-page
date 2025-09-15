@@ -57,6 +57,17 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        // Custom burger shop colors
+        "burger-red": {
+          DEFAULT: "hsl(var(--burger-red))",
+          dark: "hsl(var(--burger-red-dark))",
+          light: "hsl(var(--burger-red-light))",
+        },
+        charcoal: "hsl(var(--charcoal))",
+        "warm-gray": "hsl(var(--warm-gray))",
+      },
+      fontFamily: {
+        'diner': ['Bebas Neue', 'cursive', 'system-ui'],
       },
       borderRadius: {
         lg: "var(--radius)",
