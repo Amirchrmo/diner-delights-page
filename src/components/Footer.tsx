@@ -8,44 +8,53 @@ const Footer = () => {
           <div>
             <h3 className="font-diner text-2xl mb-4 text-primary">قصر برگر</h3>
             <p className="text-gray-300 leading-relaxed font-persian">
-              از سال ۱۳۷۵ بهترین برگرهای شهر را سرو می‌کنیم. 
-              مواد تازه، طعم‌های جسورانه، طعم فراموش‌نشدنی.
+              از سال ۱۳۷۵ بهترین برگرهای شهر را سرو می‌کنیم. مواد تازه، طعم‌های
+              جسورانه، طعم فراموش‌نشدنی.
             </p>
           </div>
-          
+
           <div>
-            <h4 className="font-semibold text-lg mb-4 font-persian">اطلاعات تماس</h4>
+            <h4 className="font-semibold text-lg mb-4 font-persian">
+              اطلاعات تماس
+            </h4>
             <div className="space-y-3">
               <div className="flex items-center justify-center md:justify-end">
-                <span className="text-gray-300 font-persian mr-3">تهران، خیابان برگر ۱۲۳، شهر غذا، کد پستی ۱۲۳۴۵</span>
+                <span className="text-gray-300 font-persian mr-3">
+                  تهران، خیابان برگر ۱۲۳، شهر غذا، کد پستی ۱۲۳۴۵
+                </span>
                 <MapPin className="w-5 h-5 text-primary" />
               </div>
               <div className="flex items-center justify-center md:justify-end">
-                <span className="text-gray-300 font-persian mr-3">۰۲۱-۱۲۳۴-برگر</span>
+                <span className="text-gray-300 font-persian mr-3">
+                  ۰۲۱-۱۲۳۴-برگر
+                </span>
                 <Phone className="w-5 h-5 text-primary" />
               </div>
             </div>
           </div>
-          
+
           <div>
-            <h4 className="font-semibold text-lg mb-4 font-persian">ما را دنبال کنید</h4>
+            <h4 className="font-semibold text-lg mb-4 font-persian">
+              ما را دنبال کنید
+            </h4>
             <div className="flex items-center justify-center md:justify-end">
-              <a 
-                href="https://instagram.com/burgerpalace" 
+              <a
+                href="https://instagram.com/bergeerd"
                 className="text-gray-300 hover:text-primary transition-colors font-persian mr-3"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                @burgerpalace
+                bergeerd
               </a>
               <Instagram className="w-6 h-6 text-primary" />
             </div>
           </div>
         </div>
-        
+
         <div className="border-t border-warm-gray mt-8 pt-8 text-center">
           <p className="text-gray-400 font-persian">
-            © ۱۴۰۳ قصر برگر. تمام حقوق محفوظ است. | با ❤️ برای عاشقان برگر ساخته شده
+            © ۱۴۰۳ قصر برگر. تمام حقوق محفوظ است. | با ❤️ برای عاشقان برگر ساخته
+            شده
           </p>
         </div>
       </div>
