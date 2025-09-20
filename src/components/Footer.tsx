@@ -2,14 +2,13 @@ import { Instagram, Phone, MapPin } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="bg-charcoal text-white py-12">
+    <footer className="bg-charcoal text-white py-12" dir="rtl">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-right">
           <div>
-            <h3 className="font-diner text-2xl mb-4 text-primary">قصر برگر</h3>
+            <h3 className="font-diner text-2xl mb-4 text-primary">برگرد</h3>
             <p className="text-gray-300 leading-relaxed font-persian">
-              از سال ۱۳۷۵ بهترین برگرهای شهر را سرو می‌کنیم. مواد تازه، طعم‌های
-              جسورانه، طعم فراموش‌نشدنی.
+              برگرد، یه گرد خوشمزه، یه طعم فراموش نشدنی!
             </p>
           </div>
 
@@ -18,15 +17,18 @@ const Footer = () => {
               اطلاعات تماس
             </h4>
             <div className="space-y-3">
-              <div className="flex items-center justify-center md:justify-end">
-                <span className="text-gray-300 font-persian mr-3">
-                  تهران، خیابان برگر ۱۲۳، شهر غذا، کد پستی ۱۲۳۴۵
+              <div className="flex items-center justify-center md:justify-end flex-row-reverse">
+                <span className="text-gray-300 font-persian ml-3">
+                  اردبیل، پارک شهریار
                 </span>
                 <MapPin className="w-5 h-5 text-primary" />
               </div>
-              <div className="flex items-center justify-center md:justify-end">
-                <span className="text-gray-300 font-persian mr-3">
-                  ۰۲۱-۱۲۳۴-برگر
+              <div className="flex items-center justify-center md:justify-end flex-row-reverse">
+                <span
+                  className="text-gray-300 font-persian ml-3"
+                  style={{ direction: "ltr" }}
+                >
+                  +989330081460
                 </span>
                 <Phone className="w-5 h-5 text-primary" />
               </div>
@@ -37,10 +39,10 @@ const Footer = () => {
             <h4 className="font-semibold text-lg mb-4 font-persian">
               ما را دنبال کنید
             </h4>
-            <div className="flex items-center justify-center md:justify-end">
+            <div className="flex items-center justify-center md:justify-end flex-row-reverse">
               <a
                 href="https://instagram.com/bergeerd"
-                className="text-gray-300 hover:text-primary transition-colors font-persian mr-3"
+                className="text-gray-300 hover:text-primary transition-colors font-persian ml-3"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -51,10 +53,12 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-warm-gray mt-8 pt-8 text-center">
+        <div
+          className="border-t border-warm-gray mt-8 pt-8 text-center"
+          dir="rtl"
+        >
           <p className="text-gray-400 font-persian">
-            © ۱۴۰۳ قصر برگر. تمام حقوق محفوظ است. | با ❤️ برای عاشقان برگر ساخته
-            شده
+            © برگرد تمام حقوق محفوظ است. | با ❤️ برای عاشقان برگر ساخته شده
           </p>
         </div>
       </div>
