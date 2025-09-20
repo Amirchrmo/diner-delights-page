@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import LOGOLoader from "@/assets/LOGO-header.png";
+import LOGOLoader from "@/assets/LOGO-Loader.png";
 
 const Loader = () => {
   const [isLoading, setIsLoading] = useState(true);
