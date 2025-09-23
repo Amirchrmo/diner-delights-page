@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import LOGOLoader from "@/assets/LOGO-Loader.png";
+import LOGOLoader from "@/assets/LOGO-header.png";
 
 const Loader = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -8,7 +8,7 @@ const Loader = () => {
     // Simulate loading time - you can adjust this duration
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 3000); // 3 seconds loading time
+    }, 1500); // 3 seconds loading time
 
     return () => clearTimeout(timer);
   }, []);
@@ -35,7 +35,7 @@ const Loader = () => {
               <img
                 src={LOGOLoader}
                 alt="Bergeerd Logo"
-                className="w-40 h-40 drop-shadow-lg"
+                className="w-24 h-24 drop-shadow-lg"
                 style={{
                   animation:
                     "logoSpin 2s ease-in-out infinite, bounce 1s infinite",
