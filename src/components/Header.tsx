@@ -1,4 +1,4 @@
-import LOGOHeader from "@/assets/LOGO-header.png";
+import LOGOHeader from "@/assets/bergerd1 tp.gif";
 import LOGOTITLE from "@/assets/LOGO-title.png";
 
 const Header = () => {
@@ -13,11 +13,7 @@ const Header = () => {
           <img
             src={LOGOHeader}
             alt="Bergeerd Logo"
-            className="w-48 h-48 md:w-48 md:h-48 mb-4 drop-shadow-lg  transition-all duration-300 ease-in-out animate-pulse "
-            style={{
-              animation:
-                "logoFloat 1s ease-in-out infinite, logoWiggle 1s ease-in-out infinite, logoHeaderSpinTwice 3s ease-in-out 1",
-            }}
+            className="w-[22rem] h-[22rem]"
           />
           <img
             src={LOGOTITLE}

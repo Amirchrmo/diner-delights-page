@@ -44,7 +44,7 @@ const Loader = () => {
             </div>
 
             {/* Floating particles around logo */}
-            <div className="absolute inset-0">
+            {/* <div className="absolute inset-0">
               <div className="absolute top-4 left-1/2 w-3 h-3 bg-white/60 rounded-full animate-ping"></div>
               <div
                 className="absolute bottom-4 left-1/2 w-3 h-3 bg-white/60 rounded-full animate-ping"
@@ -58,7 +58,7 @@ const Loader = () => {
                 className="absolute right-4 top-1/2 w-3 h-3 bg-white/60 rounded-full animate-ping"
                 style={{ animationDelay: "1.5s" }}
               ></div>
-            </div>
+            </div> */}
           </div>
         </div>
 
