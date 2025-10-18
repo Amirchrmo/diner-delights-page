@@ -5,6 +5,7 @@ import bbqBurger from "@/assets/bbq-burger.jpg";
 import doubleBurger from "@/assets/double-burger.jpg";
 import friesImage from "@/assets/fries.jpg";
 import cola from "@/assets/cola.jpg";
+import lemon from "@/assets/lemon.png";
 
 export interface MenuItem {
   id: string;
@@ -18,46 +19,54 @@ export interface MenuItem {
 export const burgers: MenuItem[] = [
   {
     id: "classic-burger",
-    name: "برگر کلاسیک",
+    name: "کلاسیک برگرد",
     description:
-      "گوشت گاو آبدار با کاهو تازه، گوجه، پیاز و سس مخصوص ما روی نان کنجدی برشته.",
+      "۱۵۰ گرم گوشت آبدار با کاهو تازه، گوجه، خیارشور و سس برگرد روی نان کره ای به همراه سیب زمینی.",
     price: "۳۲۰",
     image: classicBurger,
     imageAlt: "برگر کلاسیک با مخلفات تازه",
   },
   {
     id: "cheese-burger",
-    name: "چیزبرگر",
+    name: "چیز برگرد",
     description:
-      "گوشت گاو آبدار با پنیر آمریکایی ذوب شده، کاهو تازه، گوجه، پیاز و سس مخصوص ما.",
+      "۱۵۰ گرم گوشت آبدار با دو ورق پنیر چدار ذوب شده، کاهو تازه، گوجه، خیارشور، پیاز و سس برگرد روی نان کره ای به همراه سیب زمینی.",
     price: "۳۵۰",
     image: classicBurger,
     imageAlt: "چیزبرگر با پنیر ذوب شده",
   },
   {
     id: "mushroom-burger",
-    name: "ماشروم برگر",
+    name: "ماشروم برگرد",
     description:
-      "گوشت گاو آبدار با قارچ تازه، پنیر سوئیسی، کاهو، گوجه و سس مخصوص ما.",
+      "۱۵۰ گرم گوشت آبدار با قارچ، کاهو تازه،پنیر صبحانه، خامه، گوجه،خیارشور، پیازچه و سس برگرد روی نان کره ای به همراه سیب زمینی.",
     price: "۳۷۰",
     image: classicBurger,
     imageAlt: "ماشروم برگر با قارچ تازه",
   },
   {
     id: "smoky-burger",
-    name: "برگر دودی",
+    name: "دودی برگرد",
     description:
-      "گوشت گاو آبدار با طعم دودی، پنیر چدار، کاهو، گوجه و سس باربیکیو.",
+      "۱۵۰ گرم گوشت آبدار با دو ورق پنیر دودی، کاهو تازه،پاپریکای کبابی، گوجه، خیارشور و سس برگرد.",
     price: "۳۷۰",
     image: classicBurger,
     imageAlt: "برگر دودی با طعم باربیکیو",
   },
   {
     id: "local-burger",
-    name: "برگر محلی",
+    name: "محلی برگرد",
     description:
-      "گوشت گاو محلی آبدار با پنیر محلی، کاهو تازه، گوجه، پیاز و سس مخصوص محلی.",
+      "۱۵۰ گرم گوشت آبدار با پنیر لیقوان، ریحان تازه، گوجه، خیارشور و سس برگرد.",
     price: "۳۸۰",
+    image: classicBurger,
+    imageAlt: "برگر محلی با مواد محلی",
+  },
+  {
+    id: "chickeq-burger",
+    name: "چیکن برگرد",
+    description: "۱۵۰ گرم فیله مرغ با خیار، گوجه، ریحان تازه، و سس برگرد.",
+    price: "۲۵۰",
     image: classicBurger,
     imageAlt: "برگر محلی با مواد محلی",
   },
@@ -67,8 +76,7 @@ export const fries: MenuItem[] = [
   {
     id: "classic-fries",
     name: "سیب زمینی",
-    description:
-      "سیب‌زمینی طلایی و ترد با طعم‌دار کردن با نمک مخصوص ما. مناسب برای اشتراک یا خوردن به تنهایی.",
+    description: "سیب‌زمینی طلایی و ترد با ادویه برگردا.",
     price: "۱۵۰",
     image: friesImage,
     imageAlt: "سیب‌زمینی طلایی ترد",
@@ -79,8 +87,7 @@ export const drinks: MenuItem[] = [
   {
     id: "classic-cola",
     name: "کولا",
-    description:
-      "کولا یخ‌زده در لیوان سرد با یخ تازه. مکمل عالی برای هر برگری.",
+    description: "کولا با یخ در لیوان. مکمل عالی برای هر برگری.",
     price: "۵۵",
     image: cola,
     imageAlt: "کولا خنک‌کننده با یخ",
@@ -88,8 +95,7 @@ export const drinks: MenuItem[] = [
   {
     id: "zero-cola",
     name: "زیرو",
-    description:
-      "کولا زیرو بدون قند در لیوان سرد با یخ تازه. انتخاب سالم برای همراهی با برگر.",
+    description: "کولا زیرو بدون قندبا یخ. انتخاب سالم برای همراهی با برگر.",
     price: "۵۵",
     image: cola,
     imageAlt: "کولا زیرو بدون قند",
@@ -97,10 +103,9 @@ export const drinks: MenuItem[] = [
   {
     id: "lemonade",
     name: "لیموناد",
-    description:
-      "لیموناد تازه و خنک با طعم لیمو طبیعی. نوشیدنی طراوت‌بخش برای همراهی با غذا.",
+    description: "لیموناد خنک با طعم لیمو طبیعی.",
     price: "۵۵",
-    image: cola,
+    image: lemon,
     imageAlt: "لیموناد تازه و خنک",
   },
 ];
