@@ -96,7 +96,7 @@ export const drinks: MenuItem[] = [
   {
     id: "zero-cola",
     name: "زیرو",
-    description: "کولا زیرو بدون قندبا یخ. انتخاب سالم برای همراهی با برگر.",
+    description: "کولا زیرو بدون قند با یخ. انتخاب سالم برای همراهی با برگر.",
     price: "۵۵",
     image: cola,
     imageAlt: "کولا زیرو بدون قند",
