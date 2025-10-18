@@ -48,7 +48,7 @@ export const burgers: MenuItem[] = [
     id: "smoky-burger",
     name: "دودی برگرد",
     description:
-      "۱۵۰ گرم گوشت آبدار با دو ورق پنیر دودی، کاهو تازه،پاپریکای کبابی، گوجه، خیارشور و سس برگرد.",
+      "۱۵۰ گرم گوشت آبدار با دو ورق پنیر دودی، کاهو تازه،پاپریکای کبابی، گوجه، خیارشور و سس برگرد روی نان کره ای به همراه سیب زمینی.",
     price: "۳۷۰",
     image: classicBurger,
     imageAlt: "برگر دودی با طعم باربیکیو",
@@ -57,7 +57,7 @@ export const burgers: MenuItem[] = [
     id: "local-burger",
     name: "محلی برگرد",
     description:
-      "۱۵۰ گرم گوشت آبدار با پنیر لیقوان، ریحان تازه، گوجه، خیارشور و سس برگرد.",
+      "۱۵۰ گرم گوشت آبدار با پنیر لیقوان، ریحان تازه، گوجه، خیارشور و سس برگرد روی نان کره ای به همراه سیب زمینی.",
     price: "۳۸۰",
     image: classicBurger,
     imageAlt: "برگر محلی با مواد محلی",
@@ -65,7 +65,8 @@ export const burgers: MenuItem[] = [
   {
     id: "chickeq-burger",
     name: "چیکن برگرد",
-    description: "۱۵۰ گرم فیله مرغ با خیار، گوجه، ریحان تازه، و سس برگرد.",
+    description:
+      "۱۵۰ گرم فیله مرغ با خیار، گوجه، ریحان تازه، و سس برگرد روی نان کره ای به همراه سیب زمینی.",
     price: "۲۵۰",
     image: classicBurger,
     imageAlt: "برگر محلی با مواد محلی",
@@ -76,7 +77,7 @@ export const fries: MenuItem[] = [
   {
     id: "classic-fries",
     name: "سیب زمینی",
-    description: "سیب‌زمینی طلایی و ترد با ادویه برگردا.",
+    description: "سیب‌زمینی طلایی و ترد با ادویه برگرد.",
     price: "۱۵۰",
     image: friesImage,
     imageAlt: "سیب‌زمینی طلایی ترد",
