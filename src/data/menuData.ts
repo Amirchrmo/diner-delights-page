@@ -5,6 +5,7 @@ import bbqBurger from "@/assets/bbq-burger.jpg";
 import doubleBurger from "@/assets/double-burger.jpg";
 import friesImage from "@/assets/fries.jpg";
 import cola from "@/assets/cola.jpg";
+import morgSandwich from "@/assets/morg-sandwich.png";
 import lemon from "@/assets/lemon.png";
 
 export interface MenuItem {
@@ -21,10 +22,19 @@ export const burgers: MenuItem[] = [
     id: "classic-burger",
     name: "کلاسیک برگرد",
     description:
-      "۱۵۰ گرم گوشت آبدار با کاهو تازه، گوجه، خیارشور و سس برگرد روی نان کره ای به همراه سیب زمینی.",
+      "۱۵۰ گرم گوشت آبدار با کاهو تازه،پیاز، گوجه، خیارشور و سس برگرد روی نان کره ای به همراه سیب زمینی.",
     price: "۳۲۰",
     image: classicBurger,
     imageAlt: "برگر کلاسیک با مخلفات تازه",
+  },
+  {
+    id: "caramel-burger",
+    name: "کارامل برگرد",
+    description:
+      "۱۵۰ گرم گوشت آبدار با پیاز کاراملی، کاهو تازه، گوجه، خیارشور و سس برگرد روی نان کره ای به همراه سیب زمینی.",
+    price: "۳۵۰",
+    image: classicBurger,
+    imageAlt: "برگر کارامل با مخلفات تازه",
   },
   {
     id: "cheese-burger",
@@ -40,7 +50,7 @@ export const burgers: MenuItem[] = [
     name: "ماشروم برگرد",
     description:
       "۱۵۰ گرم گوشت آبدار با قارچ، کاهو تازه،پنیر صبحانه، خامه، گوجه،خیارشور، پیازچه و سس برگرد روی نان کره ای به همراه سیب زمینی.",
-    price: "۳۶۰",
+    price: "۳۷۰",
     image: classicBurger,
     imageAlt: "ماشروم برگر با قارچ تازه",
   },
@@ -58,7 +68,7 @@ export const burgers: MenuItem[] = [
     name: "محلی برگرد",
     description:
       "۱۵۰ گرم گوشت آبدار با پنیر لیقوان، ریحان تازه، گوجه، خیارشور و سس سیر روی نان کره ای به همراه سیب زمینی.",
-    price: "۳۸۰",
+    price: "۳۷۰",
     image: classicBurger,
     imageAlt: "برگر محلی با مواد محلی",
   },
@@ -68,7 +78,7 @@ export const burgers: MenuItem[] = [
     description:
       "۱۵۰ گرم فیله مرغ با خیار، گوجه، ریحان تازه، و سس انبه روی نان کره ای به همراه سیب زمینی.",
     price: "۲۵۰",
-    image: classicBurger,
+    image: morgSandwich,
     imageAlt: "برگر محلی با مواد محلی",
   },
 ];
