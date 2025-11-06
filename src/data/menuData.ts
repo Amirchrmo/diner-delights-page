@@ -4,6 +4,7 @@ import baconBurger from "@/assets/bacon-burger.jpg";
 import bbqBurger from "@/assets/bbq-burger.jpg";
 import doubleBurger from "@/assets/double-burger.jpg";
 import friesImage from "@/assets/fries.jpg";
+import topImage from "@/assets/top.png";
 import cola from "@/assets/cola.jpg";
 import morgSandwich from "@/assets/morg-sandwich.png";
 import lemon from "@/assets/lemon.png";
@@ -32,6 +33,15 @@ export const burgers: MenuItem[] = [
     name: "کارامل برگرد",
     description:
       "۱۵۰ گرم گوشت آبدار با پیاز کاراملی، کاهو تازه، گوجه، خیارشور و سس برگرد روی نان کره ای به همراه سیب زمینی.",
+    price: "۳۵۰",
+    image: classicBurger,
+    imageAlt: "برگر کارامل با مخلفات تازه",
+  },
+  {
+    id: "spoysi-burger",
+    name: "اسپایسی برگرد",
+    description:
+      "۱۵۰ گرم گوشت آبدار با هالوپینو تند، کاهو تازه، گوجه، خیارشور و سس برگرد روی نان کره ای به همراه سیب زمینی.",
     price: "۳۵۰",
     image: classicBurger,
     imageAlt: "برگر کارامل با مخلفات تازه",
@@ -72,15 +82,15 @@ export const burgers: MenuItem[] = [
     image: classicBurger,
     imageAlt: "برگر محلی با مواد محلی",
   },
-  {
-    id: "chickeq-burger",
-    name: "ساندویچ مرغ",
-    description:
-      "۱۵۰ گرم فیله مرغ با خیار، گوجه، ریحان تازه، و سس انبه روی نان کره ای به همراه سیب زمینی.",
-    price: "۲۵۰",
-    image: morgSandwich,
-    imageAlt: "برگر محلی با مواد محلی",
-  },
+  // {
+  //   id: "chickeq-burger",
+  //   name: "ساندویچ مرغ",
+  //   description:
+  //     "۱۵۰ گرم فیله مرغ با خیار، گوجه، ریحان تازه، و سس انبه روی نان کره ای به همراه سیب زمینی.",
+  //   price: "۲۵۰",
+  //   image: morgSandwich,
+  //   imageAlt: "برگر محلی با مواد محلی",
+  // },
 ];
 
 export const fries: MenuItem[] = [
@@ -91,6 +101,16 @@ export const fries: MenuItem[] = [
     price: "۱۵۰",
     image: friesImage,
     imageAlt: "سیب‌زمینی طلایی ترد",
+  },
+];
+export const toppings: MenuItem[] = [
+  {
+    id: "classic-topping",
+    name: "تاپینگ اضافه",
+    description: "پیاز کاراملی، پنیر دودی، پنیر چدار، هالوپینو.",
+    price: "۳۰",
+    image: topImage,
+    imageAlt: "تاپینگ اضافه",
   },
 ];
 
