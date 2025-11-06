@@ -59,7 +59,7 @@ const Footer = () => {
         >
           <p className="text-gray-400 font-persian">
             © برگرد تمام حقوق محفوظ است. | با ❤️ برای عاشقان برگر ساخته شده |
-            ساخته شده توسط FAHA
+            ساخته شده توسط Arisan
           </p>
         </div>
       </div>
