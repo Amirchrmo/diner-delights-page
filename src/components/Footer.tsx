@@ -28,7 +28,7 @@ const Footer = () => {
                   className="text-gray-300 font-persian ml-3"
                   style={{ direction: "ltr" }}
                 >
-                  +989330081460
+                  +989193998029
                 </span>
                 <Phone className="w-5 h-5 text-primary" />
               </div>
