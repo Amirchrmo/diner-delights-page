@@ -1,19 +1,35 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import MenuSection from "@/components/MenuSection";
-import { burgers, fries, drinks, toppings } from "@/data/menuData";
+import { useMenu } from "@/lib/menuApi";
 
 const Index = () => {
+  // Menu content is loaded from the bergeerd_api backend (GET /api/menu) and
+  // falls back to the static menuData.ts if the API is unavailable. Edits made
+  // in the admin panel therefore appear here automatically on refresh/refocus.
+  const { data: sections = [] } = useMenu();
+
   return (
     <div className="min-h-screen bg-background">
       <Header />
 
       <main className="container mx-auto px-4 py-16">
         <div className="max-w-6xl mx-auto">
-          <MenuSection title="برگرها" items={burgers} />
-          <MenuSection title="سیب‌زمینی" items={fries} />
-          <MenuSection title="میتونی اضافه کنی..." items={toppings} />
-          <MenuSection title="نوشیدنی‌ها" items={drinks} />
+          {sections
+            .filter((section) => section.items.length > 0)
+            .slice()
+            .sort(
+              (a, b) =>
+                (a.order ?? Number.MAX_SAFE_INTEGER) -
+                (b.order ?? Number.MAX_SAFE_INTEGER),
+            )
+            .map((section) => (
+              <MenuSection
+                key={section.title}
+                title={section.title}
+                items={section.items}
+              />
+            ))}
         </div>
       </main>
 

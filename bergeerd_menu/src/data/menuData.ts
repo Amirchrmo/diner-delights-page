@@ -25,6 +25,12 @@ export interface MenuItem {
   price: string;
   image: string;
   imageAlt: string;
+  /**
+   * Display order within a category, ascending. Lower values render first.
+   * Optional so the static fallback data (which has no explicit order) keeps
+   * working; API-sourced items always carry this field.
+   */
+  order?: number;
 }
 
 export const burgers: MenuItem[] = [
@@ -92,31 +98,25 @@ export const burgers: MenuItem[] = [
     imageAlt: "برگر محلی با مواد محلی",
   },
   {
-    id: "local-burger",
+    id: "bacon-burger",
     name: "بیکن برگرد",
     description:
       "۱۳۰ گرم گوشت گوساله آبدار با بیکن دودی، کاهو تازه،پیاز، گوجه، خیارشور و سس برگرد روی نان کره ای به همراه سیب زمینی",
     price: "۷۲۰",
     image: beyken,
-    imageAlt: "برگر محلی با مواد محلی",
+    imageAlt: "برگر بیکن دودی",
   },
-  // {
-  //   id: "omami-burger",
-  //   name: "اومامی برگرد",
-  //   description:
-  //     "۱۵۰ گرم گوشت گوساله آبدار با آووکادو،زیتون، گوجه خشک و پنیر خامه ای روی نان کره ای به همراه سیب زمینی",
-  //   price: "۳۹۵",
-  //   image: classicBurger,
-  //   imageAlt: "اومامی برگرد",
-  // },
+];
+
+export const sandwiches: MenuItem[] = [
   {
-    id: "chickeq-burger",
+    id: "chicken-sandwich",
     name: "ساندویچ مرغ",
     description:
       "۱۲۰ گرم فیله مرغ با خیار، گوجه، ریحان تازه، و سس انبه و چیلی روی نان چاپاتا کره ای به همراه سیب زمینی.",
     price: "۵۲۰",
     image: chiken,
-    imageAlt: "برگر محلی با مواد محلی",
+    imageAlt: "ساندویچ مرغ",
   },
 ];
 

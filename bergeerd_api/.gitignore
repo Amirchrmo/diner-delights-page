@@ -1,0 +1,12 @@
+# Binaries
+bergeerd-api
+*.exe
+
+# Environment
+.env
+
+# Go
+vendor/
+
+# OS
+.DS_Store

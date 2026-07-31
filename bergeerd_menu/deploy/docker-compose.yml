@@ -1,8 +1,27 @@
 services:
+  api:
+    build:
+      context: ./api
+      dockerfile: Dockerfile
+    image: bergeerd-api:latest
+    container_name: bergeerd-api
+    restart: unless-stopped
+    env_file:
+      - ./api.env
+    environment:
+      SEED_IMAGES_DIR: /seed-images
+    volumes:
+      - ./seed-images:/seed-images:ro
+    networks:
+      - sansyar_default
+      - bergeerd_internal
+
   nginx:
     image: nginx:1.27-alpine
     container_name: bergeerd-nginx
     restart: unless-stopped
+    depends_on:
+      - api
     expose:
       - "80"
     volumes:
@@ -12,7 +31,13 @@ services:
       - /opt/certs/bergeerd:/certs/bergeerd:ro
     networks:
       - proxy-net
+      - sansyar_default
+      - bergeerd_internal
 
 networks:
   proxy-net:
     external: true
+  sansyar_default:
+    external: true
+  bergeerd_internal:
+    driver: bridge
