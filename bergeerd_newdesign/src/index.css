@@ -1,0 +1,543 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Rezvan";
+  src: url("./assets/Rezvan.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ============================================================
+   Bergeerd — Premium Modern Restaurant Design System
+   Dark, warm, cinematic theme tuned for a burger diner.
+   All colors are HSL tokens.
+   ============================================================ */
+
+@layer base {
+  :root {
+    /* Base surfaces — warm cream/white so food looks appetizing */
+    --background: 36 33% 96%;
+    --foreground: 0 0% 14%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 14%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 14%;
+
+    /* Bergeerd signature red (#d2080b) as the dominant brand color */
+    --primary: 0 92% 43%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Golden amber accent for prices & highlights */
+    --accent: 38 95% 50%;
+    --accent-foreground: 20 20% 8%;
+
+    /* Secondary surface */
+    --secondary: 0 60% 96%;
+    --secondary-foreground: 0 0% 14%;
+
+    /* Muted grays */
+    --muted: 0 10% 93%;
+    --muted-foreground: 0 0% 42%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 12% 87%;
+    --input: 0 12% 87%;
+    --ring: 0 92% 43%;
+
+    /* Custom burger shop colors */
+    --burger-red: 0 92% 43%;
+    --burger-red-dark: 0 86% 35%;
+    --burger-red-light: 4 90% 56%;
+    --gold: 38 95% 50%;
+    --gold-soft: 42 92% 60%;
+    --charcoal: 0 0% 12%;
+    --warm-gray: 0 0% 38%;
+    --ember: 16 90% 56%;
+
+    /* Gradients */
+    --gradient-red: linear-gradient(135deg, hsl(4 90% 52%), hsl(0 84% 42%));
+    --gradient-gold: linear-gradient(135deg, hsl(40 95% 56%), hsl(28 88% 50%));
+    --gradient-fire: linear-gradient(135deg, hsl(0 92% 50%), hsl(22 90% 52%));
+    --gradient-surface: linear-gradient(160deg, hsl(0 0% 100%), hsl(36 33% 95%));
+    --gradient-hero: radial-gradient(circle at 50% 0%, hsl(0 90% 60% / 0.55), transparent 62%);
+
+    /* Shadows */
+    --shadow-glow: 0 0 40px -8px hsl(0 92% 45% / 0.45);
+    --shadow-gold: 0 0 30px -8px hsl(38 95% 55% / 0.45);
+    --shadow-card: 0 18px 40px -16px hsl(0 60% 30% / 0.18);
+    --shadow-float: 0 24px 60px -16px hsl(0 60% 30% / 0.28);
+
+    /* Motion */
+    --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+    --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+    --transition-smooth: all 0.4s var(--ease-out-expo);
+
+    --radius: 1.25rem;
+
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 0 0% 14%;
+    --sidebar-primary: 0 92% 43%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 0 60% 96%;
+    --sidebar-accent-foreground: 0 0% 14%;
+    --sidebar-border: 0 12% 87%;
+    --sidebar-ring: 0 92% 43%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    -webkit-tap-highlight-color: transparent;
+    overflow-x: hidden;
+    max-width: 100%;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Rezvan", sans-serif;
+    direction: rtl;
+    overflow-x: hidden;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  /* Ensure the React root never exceeds the viewport width. */
+  #root {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background: hsl(var(--primary) / 0.25);
+    color: hsl(var(--primary));
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: hsl(0 40% 94%);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: hsl(0 84% 48% / 0.6);
+    border-radius: 999px;
+    border: 2px solid hsl(0 40% 94%);
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--primary));
+  }
+
+  .font-diner {
+    font-family: "Rezvan", sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+  }
+
+  .font-persian {
+    font-family: "Rezvan", sans-serif;
+  }
+}
+
+/* ============================================================
+   Reusable utility classes
+   ============================================================ */
+@layer components {
+  .text-gradient-red {
+    background: var(--gradient-red);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+
+  .text-gradient-gold {
+    background: var(--gradient-gold);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+
+  .text-gradient-fire {
+    background: var(--gradient-fire);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+
+  .glass {
+    background: hsl(0 0% 100% / 0.72);
+    backdrop-filter: blur(16px) saturate(160%);
+    -webkit-backdrop-filter: blur(16px) saturate(160%);
+    border: 1px solid hsl(0 0% 0% / 0.06);
+  }
+
+  /* Red-dominant sticky bar / panels (used by CategoryNav, game card) */
+  .glass-strong {
+    background: hsl(0 92% 43% / 0.92);
+    backdrop-filter: blur(20px) saturate(160%);
+    -webkit-backdrop-filter: blur(20px) saturate(160%);
+    border: 1px solid hsl(0 0% 100% / 0.18);
+    color: hsl(0 0% 100%);
+  }
+
+  .ring-glow {
+    box-shadow: var(--shadow-glow);
+  }
+  .ring-gold {
+    box-shadow: var(--shadow-gold);
+  }
+
+  /* Decorative dotted / grid backgrounds */
+  .bg-dots {
+    background-image: radial-gradient(hsl(0 0% 0% / 0.05) 1px, transparent 1px);
+    background-size: 22px 22px;
+  }
+
+  /* Hide scrollbar but keep scroll (used for pill rows) */
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* ============================================================
+   Scroll-reveal system (driven by IntersectionObserver hook)
+   ============================================================ */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition:
+    opacity 0.8s var(--ease-out-expo),
+    transform 0.8s var(--ease-out-expo);
+  transition-delay: var(--reveal-delay, 0ms);
+  will-change: opacity, transform;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.reveal-left {
+  transform: translateX(-50px);
+}
+.reveal-right {
+  transform: translateX(50px);
+}
+.reveal-scale {
+  transform: scale(0.92);
+}
+.reveal-left.is-visible,
+.reveal-right.is-visible,
+.reveal-scale.is-visible {
+  transform: translate(0, 0) scale(1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .reveal-left,
+  .reveal-right,
+  .reveal-scale {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* ============================================================
+   Keyframe animations
+   ============================================================ */
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes float-down {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+}
+
+@keyframes float-soft {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-18px) rotate(3deg);
+  }
+}
+
+@keyframes float-slow {
+  0%,
+  100% {
+    transform: translateY(0) translateX(0);
+  }
+  33% {
+    transform: translateY(-22px) translateX(10px);
+  }
+  66% {
+    transform: translateY(10px) translateX(-12px);
+  }
+}
+
+@keyframes pulse-glow {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 hsl(var(--primary) / 0.5);
+  }
+  50% {
+    box-shadow: 0 0 0 18px hsl(var(--primary) / 0);
+  }
+}
+
+@keyframes gradient-shift {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes spin-slow {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes blob {
+  0%,
+  100% {
+    border-radius: 42% 58% 63% 37% / 41% 44% 56% 59%;
+    transform: translate(0, 0) rotate(0deg);
+  }
+  33% {
+    border-radius: 67% 33% 47% 53% / 37% 62% 38% 63%;
+    transform: translate(20px, -16px) rotate(120deg);
+  }
+  66% {
+    border-radius: 38% 62% 56% 44% / 63% 37% 63% 37%;
+    transform: translate(-16px, 12px) rotate(240deg);
+  }
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes ping-slow {
+  75%,
+  100% {
+    transform: scale(1.6);
+    opacity: 0;
+  }
+}
+
+@keyframes steam {
+  0% {
+    opacity: 0;
+    transform: translateY(0) scaleX(1);
+  }
+  15% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-32px) scaleX(1.6);
+  }
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.18);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes shake {
+  10%,
+  90% {
+    transform: translateX(-1px);
+  }
+  20%,
+  80% {
+    transform: translateX(2px);
+  }
+  30%,
+  50%,
+  70% {
+    transform: translateX(-4px);
+  }
+  40%,
+  60% {
+    transform: translateX(4px);
+  }
+}
+
+@keyframes confetti-fall {
+  0% {
+    transform: translateY(-10px) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(160px) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* ============================================================
+   Animation utility classes
+   ============================================================ */
+.animate-fade-in-up {
+  animation: fade-in-up 0.7s var(--ease-out-expo) both;
+}
+.animate-fade-in {
+  animation: fade-in 0.8s ease both;
+}
+.animate-scale-in {
+  animation: scale-in 0.6s var(--ease-spring) both;
+}
+.animate-float-soft {
+  animation: float-soft 6s ease-in-out infinite;
+}
+.animate-float-slow {
+  animation: float-slow 14s ease-in-out infinite;
+}
+.animate-float-down {
+  animation: float-down 2s ease-in-out infinite;
+}
+.animate-pulse-glow {
+  animation: pulse-glow 2.4s ease-out infinite;
+}
+.animate-spin-slow {
+  animation: spin-slow 22s linear infinite;
+}
+.animate-blob {
+  animation: blob 18s ease-in-out infinite;
+}
+.animate-marquee {
+  animation: marquee 32s linear infinite;
+}
+.animate-ping-slow {
+  animation: ping-slow 2.4s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+.animate-pop {
+  animation: pop 0.4s var(--ease-spring);
+}
+.animate-shake {
+  animation: shake 0.5s ease-in-out;
+}
+
+/* Accordion compat (kept for shadcn) */
+.animate-accordion-down {
+  animation: accordion-down 0.2s ease-out;
+}
+.animate-accordion-up {
+  animation: accordion-up 0.2s ease-out;
+}
+@keyframes accordion-down {
+  from {
+    height: 0;
+  }
+  to {
+    height: var(--radix-accordion-content-height);
+  }
+}
+@keyframes accordion-up {
+  from {
+    height: var(--radix-accordion-content-height);
+  }
+  to {
+    height: 0;
+  }
+}
+
+/* Shimmering text for loading states */
+.shimmer-text {
+  background: linear-gradient(
+    90deg,
+    hsl(var(--muted-foreground)) 0%,
+    hsl(var(--foreground)) 50%,
+    hsl(var(--muted-foreground)) 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 2.2s linear infinite;
+}
